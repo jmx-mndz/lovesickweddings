@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Contact & Book — Lovesick Weddings</title>
+  <meta name="description" content="Check your wedding date and book Lovesick Weddings for photography and film.">
+  <meta name="theme-color" content="#7b2f3c">
+  <meta property="og:title" content="Contact & Book — Lovesick Weddings">
+  <meta property="og:description" content="Check your wedding date and book Lovesick Weddings for photography and film.">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="assets/images/portraits/couple-stone-gate.jpg">
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;1,400;1,500&family=Jost:wght@300;400;500&family=Pinyon+Script&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head><body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="site-header">
+    <div class="container nav">
+      <a href="index.html" class="brand" aria-label="Lovesick Weddings — home">
+        <span class="brand__name">Lovesick</span>
+        <span class="brand__tag">Weddings · Photo + Film</span>
+      </a>
+      <nav aria-label="Main">
+        <ul class="nav__links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="portfolio.html">Portfolio</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="services.html">Services</a></li>
+        </ul>
+      </nav>
+      <a href="contact.html" class="btn btn--wine nav__cta" aria-current="page">Book now</a>
+      <button class="nav__toggle" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="mobile-menu"><span></span></button>
+    </div>
+  </header>
+
+  <div class="mobile-menu" id="mobile-menu">
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="portfolio.html">Portfolio</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="services.html">Services</a></li>
+      <li><a href="contact.html">Book now</a></li>
+    </ul>
+    <div class="mobile-menu__foot">
+      <a href="mailto:hello@lovesickweddings.com">hello@lovesickweddings.com</a>
+      <a href="https://www.instagram.com/lovesickweddings_/" target="_blank" rel="noopener">Instagram @lovesickweddings_</a>
+    </div>
+  </div>
+
+  <main id="main">
+    <section class="page-hero">
+      <span class="page-hero__script" aria-hidden="true">Hello</span>
+      <div class="container--narrow">
+        <span class="eyebrow eyebrow--center">Contact / Book now</span>
+        <h1>Let's make it <em>yours</em></h1>
+        <p class="lead">Tell us a little about your day. We reply to every enquiry within 24 hours.</p>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="contact-layout">
+          <aside class="contact-aside">
+            <img class="contact-aside__img" src="assets/images/portraits/bride-calla-bouquet.jpg" alt="Bride laughing with a calla lily bouquet beneath a plane tree" loading="lazy">
+            <ul class="contact-list">
+              <li><small>Email</small><a href="mailto:hello@lovesickweddings.com">hello@lovesickweddings.com</a></li>
+              <li><small>Instagram</small><a href="https://www.instagram.com/lovesickweddings_/" target="_blank" rel="noopener">@lovesickweddings_</a></li>
+              <li><small>Facebook</small><a href="https://www.facebook.com/profile.php?id=61595296276320" target="_blank" rel="noopener">Lovesick Weddings</a></li>
+            </ul>
+            <div class="socials" style="margin-top:0">
+              <a href="https://www.instagram.com/lovesickweddings_/" target="_blank" rel="noopener" aria-label="Instagram" style="color:var(--ink);border-color:var(--line)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg></a>
+              <a href="https://www.facebook.com/profile.php?id=61595296276320" target="_blank" rel="noopener" aria-label="Facebook" style="color:var(--ink);border-color:var(--line)"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M13.5 21v-7.5h2.5l.4-3h-2.9V8.6c0-.9.3-1.5 1.5-1.5h1.5V4.4c-.3 0-1.2-.1-2.2-.1-2.2 0-3.7 1.3-3.7 3.8v2.4H8v3h2.6V21h2.9z"/></svg></a>
+            </div>
+          </aside>
+
+          <div class="form-card">
+            <h2>Check your <em>date</em></h2>
+            <p>It only takes a minute. Fields marked <span style="color:var(--wine)">*</span> are required.</p>
+            <form class="form" data-ghl="Contact – Book now" novalidate>
+              <div class="form__row form__row--2">
+                <div class="field">
+                  <label for="c-first">First name <span class="req">*</span></label>
+                  <input id="c-first" name="first_name" type="text" autocomplete="given-name" placeholder="Your first name" required>
+                  <span class="field__error" aria-live="polite"></span>
+                </div>
+                <div class="field">
+                  <label for="c-last">Last name <span class="req">*</span></label>
+                  <input id="c-last" name="last_name" type="text" autocomplete="family-name" placeholder="Your last name" required>
+                  <span class="field__error" aria-live="polite"></span>
+                </div>
+              </div>
+              <div class="form__row form__row--2">
+                <div class="field">
+                  <label for="c-email">Email <span class="req">*</span></label>
+                  <input id="c-email" name="email" type="email" autocomplete="email" placeholder="you@email.com" required>
+                  <span class="field__error" aria-live="polite"></span>
+                </div>
+                <div class="field">
+                  <label for="c-phone">Phone <span class="req">*</span></label>
+                  <input id="c-phone" name="phone" type="tel" autocomplete="tel" placeholder="Best number to reach you" required>
+                  <span class="field__error" aria-live="polite"></span>
+                </div>
+              </div>
+              <div class="form__row form__row--2">
+                <div class="field">
+                  <label for="c-partner">Partner's name</label>
+                  <input id="c-partner" name="partner_name" type="text" placeholder="Their first name">
+                </div>
+                <div class="field">
+                  <label for="c-date">Wedding date <span class="req">*</span></label>
+                  <input id="c-date" name="wedding_date" type="date" required>
+                  <span class="field__error" aria-live="polite"></span>
+                </div>
+              </div>
+              <div class="form__row form__row--2">
+                <div class="field">
+                  <label for="c-venue">Venue / location</label>
+                  <input id="c-venue" name="venue" type="text" placeholder="Venue or town">
+                </div>
+                <div class="field">
+                  <label for="c-guests">Guest count</label>
+                  <select id="c-guests" name="guest_count">
+                    <option value="">Select…</option>
+                    <option>Elopement (under 20)</option>
+                    <option>20–60</option>
+                    <option>60–120</option>
+                    <option>120+</option>
+                  </select>
+                </div>
+              </div>
+              <div class="field">
+                <span id="svc-label" style="font-size:var(--fs-xs);font-weight:500;letter-spacing:.16em;text-transform:uppercase;color:var(--ink-2)">I'm interested in</span>
+                <div class="chips" data-multi="services" role="group" aria-labelledby="svc-label">
+                  <label class="chip"><input type="checkbox" value="Photography"><span>Photography</span></label>
+                  <label class="chip"><input type="checkbox" value="Film"><span>Film</span></label>
+                  <label class="chip"><input type="checkbox" value="Photo + Film" checked><span>Photo + Film</span></label>
+                  <label class="chip"><input type="checkbox" value="Content creation"><span>Content creation</span></label>
+                </div>
+              </div>
+              <div class="field">
+                <label for="c-heard">How did you find us?</label>
+                <select id="c-heard" name="lead_source">
+                  <option value="">Select…</option>
+                  <option>Instagram</option>
+                  <option>Facebook</option>
+                  <option>Google</option>
+                  <option>Venue recommendation</option>
+                  <option>Friend or family</option>
+                  <option>Other</option>
+                </select>
+              </div>
+              <div class="field">
+                <label for="c-msg">Tell us about your day</label>
+                <textarea id="c-msg" name="message" placeholder="The vibe, the venue, the moments you can't wait for…"></textarea>
+              </div>
+              <div class="hp" aria-hidden="true"><label>Website <input name="website" tabindex="-1" autocomplete="off"></label></div>
+              <div class="consent">
+                <label class="check">
+                  <input type="checkbox" name="consent" value="yes" required>
+                  <span>I agree to be contacted by Lovesick Weddings by email, phone and SMS about my enquiry. Reply STOP to opt out anytime. <span class="req" style="color:var(--wine)">*</span></span>
+                </label>
+                <label class="check">
+                  <input type="checkbox" name="marketing_opt_in" value="yes">
+                  <span>Yes, send me occasional love notes — new galleries, availability and planning tips.</span>
+                </label>
+              </div>
+              <div class="form__foot">
+                <span class="form__note">We reply within 24 hours.</span>
+                <button type="submit" class="btn btn--wine">Send enquiry <span class="arrow" aria-hidden="true">→</span></button>
+              </div>
+            </form>
+            <div class="form-success" role="status">
+              <span class="script">Thank you</span>
+              <h3>Your enquiry is in, <span data-name></span>.</h3>
+              <p>We'll check your date and be in touch within 24 hours. In the meantime, say hi on <a href="https://www.instagram.com/lovesickweddings_/" target="_blank" rel="noopener" style="color:var(--wine)">Instagram</a>.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section--tight section--ivory">
+      <div class="container">
+        <div class="img-row">
+          <a href="assets/images/getting-ready/bridal-shoes-lace.jpg" data-lightbox="contact-row" data-caption="Satin & lace" data-cursor="View"><img src="assets/images/getting-ready/bridal-shoes-lace.jpg" alt="Satin bridal heels with lace trim beside the veil" loading="lazy"></a>
+          <a href="assets/images/details/ceremony-florals.jpg" data-lightbox="contact-row" data-caption="Ceremony florals" data-cursor="View"><img src="assets/images/details/ceremony-florals.jpg" alt="White and green ceremony florals in a stone urn" loading="lazy"></a>
+          <a href="assets/images/reception/couple-toast-marquee.jpg" data-lightbox="contact-row" data-caption="The toast" data-cursor="View"><img src="assets/images/reception/couple-toast-marquee.jpg" alt="Bride and groom toasting at their marquee reception" loading="lazy"></a>
+          <a href="assets/images/details/cards-well-wishes.jpg" data-lightbox="contact-row" data-caption="Well wishes" data-cursor="View"><img src="assets/images/details/cards-well-wishes.jpg" alt="White roses beside a cards and well wishes sign" loading="lazy"></a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-top">
+        <div>
+          <a href="index.html" class="brand" aria-label="Lovesick Weddings — home">
+            <span class="brand__name">Lovesick</span>
+            <span class="brand__tag">Weddings · Photo + Film</span>
+          </a>
+          <p>Thoughtfully curated photography + film for lovers who want their wedding captured with feeling and intention.</p>
+          <div class="socials">
+            <a href="https://www.instagram.com/lovesickweddings_/" target="_blank" rel="noopener" aria-label="Instagram"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg></a>
+            <a href="https://www.facebook.com/profile.php?id=61595296276320" target="_blank" rel="noopener" aria-label="Facebook"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M13.5 21v-7.5h2.5l.4-3h-2.9V8.6c0-.9.3-1.5 1.5-1.5h1.5V4.4c-.3 0-1.2-.1-2.2-.1-2.2 0-3.7 1.3-3.7 3.8v2.4H8v3h2.6V21h2.9z"/></svg></a>
+          </div>
+        </div>
+        <div class="footer-col">
+          <h4>Explore</h4>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="portfolio.html">Portfolio</a></li>
+            <li><a href="about.html">About us</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="contact.html">Book now</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Say hello</h4>
+          <ul>
+            <li><a href="mailto:hello@lovesickweddings.com">hello@lovesickweddings.com</a></li>
+            <li><a href="https://www.instagram.com/lovesickweddings_/" target="_blank" rel="noopener">@lovesickweddings_</a></li>
+            <li><a href="contact.html">Check your date</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>© <span data-year></span> Lovesick Weddings. All rights reserved.</span>
+        <span>Photography + Film</span>
+      </div>
+    </div>
+  </footer>
+
+  <div class="lightbox" role="dialog" aria-modal="true" aria-label="Photo viewer" aria-hidden="true">
+    <button class="lightbox__btn lightbox__close" type="button" aria-label="Close"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M5 5l14 14M19 5L5 19"/></svg></button>
+    <button class="lightbox__btn lightbox__prev" type="button" aria-label="Previous photo"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M15 5l-7 7 7 7"/></svg></button>
+    <img class="lightbox__img" src="" alt="">
+    <button class="lightbox__btn lightbox__next" type="button" aria-label="Next photo"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M9 5l7 7-7 7"/></svg></button>
+    <p class="lightbox__cap"></p>
+  </div>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
