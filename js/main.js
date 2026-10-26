@@ -33,15 +33,18 @@ function initHeader() {
   }
 
   if (toggle) {
-    toggle.addEventListener("click", () => {
-      const open = document.body.classList.toggle("nav-open");
-      toggle.setAttribute("aria-expanded", String(open));
+    const menu = $(".mobile-menu");
+    const setMenu = (open) => {
+      document.body.classList.toggle("nav-open", open);
       document.body.classList.toggle("no-scroll", open);
-    });
-    $$(".mobile-menu a").forEach(a => a.addEventListener("click", () => {
-      document.body.classList.remove("nav-open", "no-scroll");
-      toggle.setAttribute("aria-expanded", "false");
-    }));
+      toggle.setAttribute("aria-expanded", String(open));
+      toggle.setAttribute("aria-label", open ? "Close menu" : "Open menu");
+      menu?.setAttribute("aria-hidden", String(!open));
+    };
+    toggle.addEventListener("click", () => setMenu(!document.body.classList.contains("nav-open")));
+    $$(".mobile-menu a").forEach(a => a.addEventListener("click", () => setMenu(false)));
+    document.addEventListener("keydown", (e) => { if (e.key === "Escape") setMenu(false); });
+    window.addEventListener("resize", () => { if (window.innerWidth >= 1000) setMenu(false); });
   }
 
   $$("[data-year]").forEach(el => (el.textContent = new Date().getFullYear()));
