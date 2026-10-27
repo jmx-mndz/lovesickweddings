@@ -472,8 +472,63 @@ function initForms() {
   }
 }
 
+/* ---------- LOADER (3D camera) ------------------------------------------
+   Shows until the page + images finish loading (min 1.6s, max 6s).
+   Repeat page views in the same visit get a faster loader.
+   ← EDIT timings here                                                    */
+function initLoader() {
+  const loader = $(".loader");
+  if (!loader) { document.body.classList.remove("is-loading"); return; }
+  const pctEl = $("[data-loader-pct]", loader);
+  const bar = $(".loader__bar span", loader);
+
+  let seen = false;
+  try { seen = sessionStorage.getItem("ls-loaded") === "1"; } catch (e) {}
+  const MIN = reduceMotion ? 300 : (seen ? 700 : 1600);
+  const MAX = 6000;
+  const start = performance.now();
+
+  const imgs = $$("img").filter(i => i.loading !== "lazy");
+  let done = 0;
+  const total = Math.max(imgs.length, 1);
+  const bump = () => { done++; };
+  imgs.forEach(img => (img.complete ? bump() : (img.addEventListener("load", bump, { once: true }), img.addEventListener("error", bump, { once: true }))));
+
+  let shown = 0, finished = false;
+  const tick = () => {
+    const t = performance.now() - start;
+    const real = done / total;
+    const timeCap = Math.min(t / MIN, 1);
+    const target = finished ? 1 : Math.min(real, timeCap) * 0.96;
+    shown += (target - shown) * 0.12;
+    if (pctEl) pctEl.textContent = Math.round(shown * 100);
+    if (bar) bar.style.setProperty("--p", shown.toFixed(3));
+    if (finished && shown > 0.995) return hide();
+    requestAnimationFrame(tick);
+  };
+  requestAnimationFrame(tick);
+
+  const finish = () => {
+    if (finished) return;
+    const wait = Math.max(0, MIN - (performance.now() - start));
+    setTimeout(() => (finished = true), wait);
+  };
+  if (document.readyState === "complete") finish();
+  else window.addEventListener("load", finish, { once: true });
+  setTimeout(finish, MAX);
+
+  function hide() {
+    if (pctEl) pctEl.textContent = "100";
+    loader.classList.add("is-done");
+    document.body.classList.remove("is-loading");
+    try { sessionStorage.setItem("ls-loaded", "1"); } catch (e) {}
+    setTimeout(() => loader.remove(), 900);
+  }
+}
+
 /* ---------- BOOT -------------------------------------------------------- */
 document.addEventListener("DOMContentLoaded", () => {
+  initLoader();
   initHeader();
   initHeroCamera();
   Lightbox.init();
